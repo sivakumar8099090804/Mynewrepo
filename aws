@@ -1,1 +1,126 @@
 adding some data to aws
+<!-- Place the following CSS in your <head> or stylesheet -->
+<style>
+/* This is an optional body style to provide a background for the page */
+body {
+    background-color: #f0f0f0; /* A neutral light gray */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+​
+/* === Grid Container for the Cards === */
+.cards-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+​
+/* === Overlay Text on Image Card Styles === */
+.oti-card {
+    --oti-card-radius: 12px;
+    --oti-card-height: 420px;
+​
+    position: relative; /* Positioning context for children */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    height: var(--oti-card-height);
+    background: #222; /* Fallback background */
+    border-radius: var(--oti-card-radius);
+    overflow: hidden; /* Clips the image and overlay to the card's shape */
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out;
+}
+​
+.oti-card:hover {
+    transform: scale(1.03);
+}
+​
+/* The card's background image */
+.oti-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+​
+.oti-card:hover .oti-card-image {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+​
+/* Gradient overlay for text readability */
+.oti-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 75%);
+}
+​
+/* Wrapper for the text content */
+.oti-card-content {
+    position: relative; /* Places content above the overlay */
+    z-index: 3;
+    padding: 1.5rem;
+}
+​
+.oti-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+​
+.oti-card-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.85;
+}
+</style>
+​
+<!-- Place the following HTML in your <body> -->
+<div class="cards-grid-container">
+    
+    <!-- Card 1 -->
+    <a href="#" class="oti-card" aria-label="Explore a Tropical Paradise">
+        <!-- Image from picsum.photos. Replace with your own. -->
+        <img class="oti-card-image" src="https://picsum.photos/id/1015/600/800" alt="An aerial view of a tropical beach with turquoise water.">
+        <div class="oti-card-content">
+            <h3 class="oti-card-title">A Tropical Paradise</h3>
+            <p class="oti-card-description">Discover the pristine beaches and crystal-clear waters of the South Pacific.</p>
+        </div>
+    </a>
+    
+    <!-- Card 2 -->
+    <a href="#" class="oti-card" aria-label="Journey Through the Ancient Forest">
+        <!-- Image from picsum.photos. Replace with your own. -->
+        <img class="oti-card-image" src="https://picsum.photos/id/1043/600/800" alt="Sunbeams shining through a dense, mystical forest.">
+        <div class="oti-card-content">
+            <h3 class="oti-card-title">The Ancient Forest</h3>
+            <p class="oti-card-description">Explore a world of giants where moss-covered trees tell ancient tales.</p>
+        </div>
+    </a>
+​
+    <!-- Card 3 -->
+    <a href="#" class="oti-card" aria-label="Adventures in the Mountain Range">
+        <!-- Image from picsum.photos. Replace with your own. -->
+        <img class="oti-card-image" src="https://picsum.photos/id/103/600/800" alt="A dramatic mountain range with peaks reflecting in a calm lake.">
+        <div class="oti-card-content">
+            <h3 class="oti-card-title">Majestic Mountain Peaks</h3>
+            <p class="oti-card-description">Embark on a breathtaking journey to conquer the highest peaks.</p>
+        </div>
+    </a>
+    
+</div>
