@@ -134,3 +134,126 @@
     </article>
     
 </div>
+
+
+<!-- Place the following CSS in your <head> or stylesheet -->
+<style>
+/* === Grid Container for the Cards === */
+.cards-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+/* === Icon, Title, Description Card Styles === */
+.itd-card {
+    --itd-card-padding: 2rem;
+    --itd-card-bg-color: #ffffff;
+    --itd-card-border-radius: 12px;
+    --itd-card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    background-color: var(--itd-card-bg-color);
+    border-radius: var(--itd-card-border-radius);
+    padding: var(--itd-card-padding);
+    text-align: center;
+    box-shadow: var(--itd-card-shadow);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.itd-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.itd-card .itd-card-icon {
+    --itd-icon-bg-color: #eef2ff; /* Light indigo background */
+    --itd-icon-color: #4f46e5; /* Indigo */
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--itd-icon-bg-color);
+    margin-bottom: 1.5rem;
+}
+
+.itd-card .itd-card-icon svg {
+    width: 32px;
+    height: 32px;
+    color: var(--itd-icon-color);
+}
+
+.itd-card .itd-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.itd-card .itd-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* Optional: Different icon colors for variety */
+.itd-card.style-2 .itd-card-icon {
+    --itd-icon-bg-color: #ecfdf5; /* Light green */
+    --itd-icon-color: #10b981; /* Green */
+}
+.itd-card.style-3 .itd-card-icon {
+    --itd-icon-bg-color: #fffbeb; /* Light yellow */
+    --itd-icon-color: #f59e0b; /* Yellow */
+}
+
+</style>
+
+<!-- Place the following HTML in your <body> -->
+<div class="cards-grid-container">
+    
+    <!-- Card 1 -->
+    <div class="itd-card">
+        <div class="itd-card-icon">
+            <!-- Replace with your own SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+            </svg>
+        </div>
+        <h3 class="itd-card-title">Powerful Customization</h3>
+        <p class="itd-card-description">Tailor every aspect of the component to fit your brand's unique style with easy-to-use variables.</p>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="itd-card style-2">
+        <div class="itd-card-icon">
+            <!-- Replace with your own SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+        </div>
+        <h3 class="itd-card-title">Blazing Fast Performance</h3>
+        <p class="itd-card-description">Optimized for speed and efficiency, ensuring your website loads quickly for all of your visitors.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="itd-card style-3">
+        <div class="itd-card-icon">
+            <!-- Replace with your own SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.17 48.17 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.028z" />
+            </svg>
+        </div>
+        <h3 class="itd-card-title">Dedicated Support</h3>
+        <p class="itd-card-description">Our friendly support team is always available to help you with any questions or issues you encounter.</p>
+    </div>
+    
+</div>
+
+
+
