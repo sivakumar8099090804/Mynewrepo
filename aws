@@ -3,6 +3,7 @@ adding some data to aws
 <style>
 /* This is an optional body style to provide a background for the page */
 body {
+<<<<<<< Updated upstream
     background-color: #f0f0f0; /* A neutral light gray */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 }
@@ -123,4 +124,155 @@ body {
         </div>
     </a>
     
+=======
+    background-color: #f3f4f6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+/* Container for the list of messages */
+.messages-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.messages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.messages-list li:not(:last-child) .dm-card-link {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* === Direct Message Preview Card Styles === */
+.dm-card-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+.dm-card-link:hover {
+    background-color: #f9fafb;
+}
+
+.dm-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.dm-content {
+    flex-grow: 1;
+    overflow: hidden; /* Important for text truncation */
+}
+
+.dm-sender-name {
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+}
+.dm-message-preview {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0.25rem 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Timestamp and unread dot */
+.dm-meta {
+    flex-shrink: 0;
+    text-align: right;
+}
+.dm-timestamp {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+}
+
+.dm-unread-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    display: inline-block;
+    visibility: hidden; /* Hidden by default */
+}
+
+/* UNREAD STATE STYLES */
+/* Add the .is-unread class to the li element */
+.is-unread .dm-sender-name {
+    font-weight: 700;
+}
+.is-unread .dm-message-preview {
+    color: #1f2937;
+    font-weight: 500;
+}
+.is-unread .dm-unread-dot {
+    visibility: visible;
+}
+
+</style>
+
+<!-- Place the following HTML in your <body> -->
+<div class="messages-container">
+    <ul class="messages-list">
+        
+        <!-- Item 1: Unread -->
+        <li class="is-unread">
+            <a href="#" class="dm-card-link">
+                <img src="https://placehold.co/96x96/ec4899/ffffff/png?text=E" alt="Avatar of Elara Vance" class="dm-avatar">
+                <div class="dm-content">
+                    <h3 class="dm-sender-name">Elara Vance</h3>
+                    <p class="dm-message-preview">Sounds great! I've sent over the final mockups for the dashboard. Let me know what you think.</p>
+                </div>
+                <div class="dm-meta">
+                    <time datetime="10:45" class="dm-timestamp">10:45 AM</time>
+                    <span class="dm-unread-dot"></span>
+                </div>
+            </a>
+        </li>
+
+        <!-- Item 2: Read -->
+        <li>
+            <a href="#" class="dm-card-link">
+                <img src="https://placehold.co/96x96/3b82f6/ffffff/png?text=A" alt="Avatar of Dr. Aris Thorne" class="dm-avatar">
+                <div class="dm-content">
+                    <h3 class="dm-sender-name">Dr. Aris Thorne</h3>
+                    <p class="dm-message-preview">No problem, I can have the report ready by tomorrow morning.</p>
+                </div>
+                <div class="dm-meta">
+                    <time datetime="09:12" class="dm-timestamp">9:12 AM</time>
+                    <span class="dm-unread-dot"></span>
+                </div>
+            </a>
+        </li>
+        
+         <!-- Item 3: Read -->
+        <li>
+            <a href="#" class="dm-card-link">
+                <img src="https://placehold.co/96x96/f59e0b/ffffff/png?text=F" alt="Avatar of Felix Quinn" class="dm-avatar">
+                <div class="dm-content">
+                    <h3 class="dm-sender-name">Felix Quinn</h3>
+                    <p class="dm-message-preview">Meeting reminder for 2:00 PM today, don't forget the presentation slides!</p>
+                </div>
+                <div class="dm-meta">
+                    <time datetime="08:30" class="dm-timestamp">8:30 AM</time>
+                    <span class="dm-unread-dot"></span>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+>>>>>>> Stashed changes
 </div>
