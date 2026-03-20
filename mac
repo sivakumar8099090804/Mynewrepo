@@ -1,2 +1,6 @@
 adding some initial data
+<<<<<<< Updated upstream
 Adding data for committing in Git hub
+=======
+adding some data without pushing to git hub
+>>>>>>> Stashed changes
